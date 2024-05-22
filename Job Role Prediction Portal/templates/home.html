@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+body{
+background: Khaki;
+}
+.graph-cont{
+font-size: 25px;
+margin-left: 340px;
+}
+
+
+</style>
+</head>
+<body>
+<br><br><br><br>
+<b><h1 align="center">Hey! The top job roles that matched your skills.....</h1><br><br></b>
+   <div class="graph-cont">
+   <h3>You can be a great:</h3>
+   <div class="bar bar1" ><font color="blue"> {{ job0 }}</a></font></div><br>
+{%for key, value in final_res.items(): %}
+	{%if job0!=job_dict[value]%}
+		 <div class="bar bar2"><font color="blue">{{job_dict[value]}}</a></font></div><br>	
+	{%endif%}
+{%endfor%}
+</body>
+</html>
